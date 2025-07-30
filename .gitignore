@@ -1,0 +1,43 @@
+# Compiled object files
+*.o
+*.obj
+
+# Executables
+*.exe
+mdriver
+mdriver-realloc
+mdriver-garbage
+
+# Libraries
+*.a
+*.lib
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build directories
+build/
+bin/
+obj/
+
+# Core dumps
+core
