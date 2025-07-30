@@ -1,0 +1,27 @@
+*****************************
+* Lab 5 Synthesis Questions *
+*****************************
+Name(s): Daniel Qian, Marqus Pilapil
+NetID(s): dq24, mpilapil
+
+
+-----------------------------------------------------------
+1) Alignment: 16 bytes
+   Reasoning: No matter how many bytes I allocate, the class grades array is always filled at an array starting with 0,
+   indicating that the alignment size is 16 bytes since all the addresses I get have a highest number which they are a multiple of, 
+   this number being 16. 
+
+
+
+-----------------------------------------------------------
+2) Boundary Tag Size: 8 bytes
+   Reasoning: I tested a lot of different malLoc sizes. No matter what malloc size I chose i.e. malloc(1), 
+   the amount of space that would be allocated ended up giving me addresses that were 32 bytes apart, 
+   indicating that the block size must be at least 32 bytes. Then, when I tested malloc(24) I got a 32 byte difference between the next malloc, 
+   whereas when I tested malloc(25) I got a 48 byte difference between the addresses allocated at this malloc vs the next one. This indicates 
+   that the header size + 25 bytes isn't big enough to fit into the 32 byte block size, indicating that the boundary tag size is 8 bytes 
+   since this change occurred between malloc(24) and malloc(25). 
+
+
+
+-----------------------------------------------------------
